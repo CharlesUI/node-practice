@@ -1,0 +1,19 @@
+{
+  "name": "nodecamp",
+  "version": "1.0.0",
+  "description": "first node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node",
+    "sheesh"
+  ],
+  "author": "Charles",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
