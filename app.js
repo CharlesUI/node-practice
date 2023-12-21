@@ -52,3 +52,9 @@ console.log('ending async read and write')
 // console.log(path.join('content', '/subfolder', 'first.txt'))
 // console.log(path.resolve(__dirname, '/content', 'subfolder', 'first.txt'))
 
+const _ = require('lodash')
+
+const items = [1,[2,[4,[5]]]]
+
+const mergedItems = _.flatMapDeep(items)
+console.log(mergedItems)
