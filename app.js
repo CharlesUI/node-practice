@@ -6,12 +6,12 @@ showData(obj)
 const fs = require('fs')
 
 //Sync read and write
-const first = fs.readFileSync('./content/subfolder/first.txt', 'utf8')
+// const first = fs.readFileSync('./content/subfolder/first.txt', 'utf8')
 
-fs.writeFileSync('./content/second.txt', 'second hey hey', { flag: 'a' })
-console.log(first)
+// fs.writeFileSync('./content/second.txt', 'second hey hey', { flag: 'a' })
+// console.log(first)
 
-//Async read and write
+//Async read and write but with callback hell
 console.log('starting async read and write')
 fs.readFile('./content/firstAsyncc.txt', 'utf8', (err, data) => {
     if(err) {
@@ -31,7 +31,7 @@ fs.readFile('./content/firstAsyncc.txt', 'utf8', (err, data) => {
                 return
             }
             console.log(data)
-            console.log('process is done')
+            console.log('Process is done')
         })
     })
 })

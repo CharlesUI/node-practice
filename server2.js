@@ -9,6 +9,14 @@ const server = http.createServer((req, res) => {
             res.end('Home')
             break;
         case '/about':
+            //BLOCKING CODE BEFIRE ACCESSING ABOUT PAGE
+            //THIS WILL ALSO BLOCK OTHER SITES LOADING WHEN SYNC FUNCTIONS ARE BLOCKING THE SITE
+            //ALWAYS TRY TO SET UP THINGS ASYNCHRONOUSLY
+            for (let i = 0; i < 500; i++) {
+                for (let j = 0; j < 500; j++) {
+                    console.log(`${i} ${j}`)    
+                }
+            }
             res.end('About')
             break;
         default:
@@ -18,9 +26,8 @@ const server = http.createServer((req, res) => {
             )
             break;
     }
-    
 })
 
-server.listen(3000, (err) => {
-    console.log('listening to port 3000')
+server.listen(5000, (err) => {
+    console.log('listening')
 })
